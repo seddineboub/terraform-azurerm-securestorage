@@ -1,3 +1,5 @@
+# init terraform provider
+
 terraform {
   required_version = ">=1.3.0"
   required_providers {
@@ -7,6 +9,8 @@ terraform {
     }
   }
 }
+
+# create storage account - tier = Standard / replica type = GRS
 
 resource "azurerm_storage_account" "securestorage" {
   resource_group_name      = var.resource_group_name
